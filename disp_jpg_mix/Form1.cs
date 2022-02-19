@@ -17,6 +17,7 @@ namespace disp_jpg_mix
     public partial class Form1 : Form
     {
         int stop_flag = 0;
+        int inc_interval = 0;
         public Form1()
         {
             InitializeComponent();
@@ -50,17 +51,17 @@ namespace disp_jpg_mix
             string[] files = System.IO.Directory.GetFiles(
                 s3, "*.jpg", System.IO.SearchOption.AllDirectories);
 
-
+            int interval = 0;
             try
             {
                 foreach (string file in files)
                 {
                     pictureBox1.Width = int.Parse(textBox2.Text);
-                    pictureBox1.Height = int.Parse(textBox3.Text); ;
+                    pictureBox1.Height = int.Parse(textBox3.Text);
                     pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox1.ImageLocation = file;
-
-                    Thread.Sleep(int.Parse(textBox4.Text));
+                    interval = int.Parse(textBox4.Text);
+                    Thread.Sleep(interval);
                     if (stop_flag == 1) break;
                 }
 
@@ -75,6 +76,27 @@ namespace disp_jpg_mix
         private void button2_Click_1(object sender, EventArgs e)
         {
             stop_flag = 1;
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (int.Parse(textBox4.Text) > 0)
+            {
+                textBox4.Text = (int.Parse(textBox4.Text) - 100).ToString();
+            }
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = (int.Parse(textBox4.Text) + 100).ToString();
 
         }
     }

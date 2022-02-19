@@ -39,6 +39,8 @@ namespace disp_jpg_mix
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,11 +125,33 @@ namespace disp_jpg_mix
             this.label2.TabIndex = 8;
             this.label2.Text = "インターバルms";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(709, 105);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(106, 29);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "速く";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(709, 140);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 29);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "遅く";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 813);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -139,6 +163,7 @@ namespace disp_jpg_mix
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,6 +182,8 @@ namespace disp_jpg_mix
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
