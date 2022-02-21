@@ -99,5 +99,22 @@ namespace disp_jpg_mix
             textBox4.Text = (int.Parse(textBox4.Text) + 100).ToString();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (int.Parse(textBox2.Text) > 0)
+            {
+                textBox2.Text = (int.Parse(textBox2.Text) - 10).ToString();
+                textBox3.Text = (int.Parse(textBox3.Text) - 10).ToString();
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = (int.Parse(textBox2.Text) + 10).ToString();
+            textBox3.Text = (int.Parse(textBox3.Text) + 10).ToString();
+
+        }
     }
 }
